@@ -58,6 +58,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="my-pwp-mariodiaz">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="pre-work-Phase-I">
         <serverdata>
           <mappings>
