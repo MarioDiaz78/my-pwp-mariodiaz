@@ -39,3 +39,8 @@
 .icon-list li {
     margin-bottom: 0;
 }
+
+.skills-list {
+    list-style: circle;
+    display: flex;
+}
