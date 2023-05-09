@@ -1,0 +1,41 @@
+/*sets the perspective and scroll properties for the whole page*/
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;  /*disables horizontal scrollbar when you scale an image*/
+    overflow-y: auto;
+    perspective: 2px;   /*simulates the distance from the viewport to the pseudo-elements*/
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    background: #777777;
+}
+
+.fa-2x {
+    font-size: 1em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+.icon-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    //padding: 0;
+    //width: 100px;
+}
+
+.icon-list li {
+    margin-bottom: 0;
+}
