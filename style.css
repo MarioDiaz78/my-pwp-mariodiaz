@@ -6,7 +6,29 @@
     perspective: 2px;   /*simulates the distance from the viewport to the pseudo-elements*/
 }
 
-.parallax::after {
+.parallax {
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-image:;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-50%);
+    will-change: transform;
+    z-index:-1;
+}
+
+/*.parallax::after {
     content: " ";
     position: absolute;
     top: 0;
@@ -16,6 +38,11 @@
     transform: translateZ(-1px) scale(1.5);
     background-size: 100%;
     z-index: -1;
+}*/
+
+.parallax .parallax-content {
+    position: relative;
+    z-index: 1;
 }
 
 .static {
