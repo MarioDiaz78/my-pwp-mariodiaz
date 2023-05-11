@@ -1,9 +1,13 @@
-/*sets the perspective and scroll properties for the whole page*/
+/* sets the perspective and scroll properties for the whole page */
 .wrapper {
     height: 100vh;
-    overflow-x: hidden;  /*disables horizontal scrollbar when you scale an image*/
+    overflow-x: hidden;  /* disables horizontal scrollbar when you scale an image */
     overflow-y: auto;
-    perspective: 2px;   /*simulates the distance from the viewport to the pseudo-elements*/
+    perspective: 2px;   /* simulates the distance from the viewport to the pseudo-elements */
+}
+
+.profile-section {
+    min-height: 100vh;
 }
 
 .parallax {
@@ -19,7 +23,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /*background-image:;*/
+    /* background-image:; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -70,4 +74,19 @@
 .skills-list {
     list-style: circle;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;   /*sets distance in (li) flex container */
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list li {
+    padding: 1px 1px;  /* 5px part adds padding top an bottom and 10 px left and right */
+    background-color: #a78686;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 100px;
+    height: 25px;
+
 }
