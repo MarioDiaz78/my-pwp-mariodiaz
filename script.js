@@ -1,14 +1,17 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true,
-    multiplier: .5,
-});
+// Smooth scrolling
+$(document).ready(function () {
+    $(".nav-link").on('click', function (event) {
+        event.preventDefault();
+        var hash = this.hash;
+        var offsetTop = $(hash).offset().top;
+        var extraScroll = 10;
+        var scrollTo = offsetTop + extraScroll;
 
-scroll.on('scroll', () => {
-    const progress = scroll.scroll.instance.scroll.y / scroll.scroll.limit.y;
-
-    const elementToScale = document.querySelector(' .my-element');
-    const scaleValue = 1 + (progress * 0.5);
-    elementToScale.style.transform = `scale(${scaleValue})`;
+        $('html, body').animate({
+            scrollTop: scrollTo
+        }, 1500, function () {
+            window.location.hash = hash;
+        });
+    });
 });
 

@@ -1,3 +1,17 @@
+body{
+    background-color: #000080;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 nav{
     background-color: transparent;
     position: fixed;
@@ -5,6 +19,7 @@ nav{
     z-index: 1000;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
 nav ul{
@@ -171,5 +186,4 @@ nav li a:hover {
 .projects-section .row{
     flex-wrap: wrap;
 }
-
 
