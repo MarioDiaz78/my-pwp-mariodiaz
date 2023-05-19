@@ -111,18 +111,15 @@ nav li a:hover {
 }
 
 .skills-list {
-    list-style: circle;
+    list-style: none;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 5px;   /*sets distance in (li) flex container */
     margin: 0;
     padding: 0;
-    align-content: center;
-}
-
-.skills-section{
-    text-align: left;
+    text-align: center;
+    align-items: center;
 }
 
 .skills-list li {
@@ -133,7 +130,6 @@ nav li a:hover {
     width: 100px;
     height: 25px;
     margin-bottom: 0;
-
 }
 
 @media (max-width: 600px){
@@ -160,6 +156,9 @@ nav li a:hover {
         margin-bottom: 80px;
     }
 
+    .skills-list {
+        align-items: center;
+    }
 }
 
 
@@ -182,8 +181,16 @@ a.button{
     color: white;
     border-radius: 4px;
     transition: background-color 0.5s ease;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 a.button:hover{
     background-color: lightskyblue;
+}
+
+.projects-section h2 {
+    text-align: center;
+    padding-top: 60px;
 }
