@@ -2,10 +2,17 @@
 $(document).ready(function () {
     $(".nav-link").on('click', function (event) {
         event.preventDefault();
-        var hash = this.hash;
+        var hash = this.hash || $(this).attr('href');
         var offsetTop = $(hash).offset().top;
+        var navbarHeight = $('#navbar').height();
         var extraScroll = 10;
-        var scrollTo = offsetTop + extraScroll;
+
+        var scrollTo;
+        if (hash === this.hash) {
+            scrollTo = offsetTop + extraScroll;
+        }else{
+            scrollTo = offsetTop - navbarHeight;
+        }
 
         $('html, body').animate({
             scrollTop: scrollTo
@@ -15,7 +22,7 @@ $(document).ready(function () {
     });
 });
 
-
+/*https://github.com/javascriptacademy-stash/digital-rain/blob/master/index.js*/
 const canvas = document.getElementById('matrix');
 const context = canvas.getContext('2d');
 
@@ -35,7 +42,7 @@ const rainDrops = [];
 
 for( let x = 0; x < columns; x++ ) {
     rainDrops[x] = Math.floor(Math.random()*canvas.height/fontSize);// modified this part to start at random points
-    // in site.
+    // on my site.
 }
 
 const draw = () => {
