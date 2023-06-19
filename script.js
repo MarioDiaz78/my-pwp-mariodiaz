@@ -65,3 +65,6 @@ const draw = () => {
 };
 setInterval(draw, 30);
 //setInterval(draw, 60);
+
+
+var board1 = new ChessBoard3('board1', 'start');
