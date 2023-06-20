@@ -187,6 +187,10 @@ nav li a:hover {
         display: flex;
         flex-direction: column;
     }
+
+    #nameHeader {
+        width: 70% !important;
+    }
 }
 
 .education-resume-section{

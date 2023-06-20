@@ -27,7 +27,7 @@ scene.add( line );
 // Create 3D text
 const loader = new FontLoader();
 loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
-    const textGeometry = new THREE.TextGeometry( 'Mario Diaz', {
+    const textGeometry = new THREE.TextGeometry( 'Mario Diaz Jr', {
         font: font,
         size: 0.2,
         height: 0.05,
@@ -39,11 +39,10 @@ loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
 });
 
 function animate() {
+    console.log(cube.rotation);
     requestAnimationFrame( animate );
-
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
-
     renderer.render( scene, camera );
 }
 
