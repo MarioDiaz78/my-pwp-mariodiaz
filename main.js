@@ -8,7 +8,8 @@ camera.position.z = 5;
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+document.getElementById('3d-content').appendChild( renderer.domElement );
+
 
 // Create a cube with translucent material
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
