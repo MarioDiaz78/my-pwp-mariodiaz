@@ -7,7 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!--<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>-->
+
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+    }
+  }
+
+    </script>
+
 </head>
 
 <body data-scroll-conatiner>
@@ -28,15 +43,27 @@
 
     <section id="profile" class="profile-section parallax d-flex justify-content-center align-items-center">
         <div data-scroll data-scroll-speed="1" class="container">
-            <div class="row align-items-end g-1 py-5"> <!--<div class="row align-items-top g-1 py-5">-->
-                <div class="col-lg-4">
+            <div class="row justify-content-end g-1 py-5">
+                <div class="col-md-4 text-center align-items-center ">
                     <img src="mypic.jpg"
-                         class="mb-5 bd-placeholder-img square img-responsive bottom-block d-block mx-auto border border-3 rounded"
+                         class="mb-5 bd-placeholder-img square img-responsive bottom-block d-block mx-auto border border-2 rounded"
                          alt="javascriptI" width="190" height="230">
+                    <h2 id="nameHeader"
+                        class="text-primary text-center border border-2 rounded p-1 bg-black mx-auto"
+                        style="width: 70%">Mario Diaz Jr</h2>
                 </div>
-                <div class="col-md-3 text-center align-items-center border border-2 rounded p-1 bg-black">
-                    <h2 class="text-primary">Mario Diaz Jr</h2>
+
+                <div class="col-8 d-flex justify-content-end carousel">
+                    <img class="carousel__item border border-2 rounded" src="UNM.jpg" alt="Image 1" width="auto"
+                         height="200px">
+                    <img class="carousel__item border border-2 rounded" src="deep.jpg" alt="Image 2" width="auto"
+                         height="150px">
+                    <img class="carousel__item border border-2 rounded" src="CNM.png" alt="Image 3" width="auto"
+                         height="200px">
+                    <img class="carousel__item border border-2 rounded" src="ingenuity.png" alt="Image 3" width="auto"
+                         height="200px">
                 </div>
+
             </div>
         </div>
     </section>
@@ -49,7 +76,7 @@
                         <li><a href="https://github.com/MarioDiaz78/" target="_blank">
                             <i class="fa-brands fa-github fa-2x"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/mario-diaz-jr-400817198/" target="_blank">
+                        <li><a href="https://www.linkedin.com/in/mario-diaz-400817198/" target="_blank">
                             <i class="fa-brands fa-linkedin fa-2x"></i></a>
                         </li>
                     </ul>
@@ -57,16 +84,14 @@
                 <div class="col-lg-8">
                     <h5>About me:</h5>
                     <p>
-                        Hello, my name is Mario Diaz and I’m a Junior Web Developer with a soon to be AS degree in
+                        Hello, my name is Mario Diaz, and I’m a Junior Web Developer with a soon-to-be AS degree in
                         Computer Science. I completed and gained experience in both front-end and back-end web
-                        development in a Full Stack Web Development Bootcamp at CNM Ingenuity.
-                    </p>
+                        development in a Full Stack Web Development Bootcamp at CNM Ingenuity.</p>
                     <p>
                         I started my education back in 1997 at the University of New Mexico towards a BS in Chemistry.
                         Although I didn’t finish, I accumulated around 115 credit hours. Many of those credits were
                         transferred to CNM a couple of years ago when I became interested in the field of Computer
-                        Science.
-                    </p>
+                        Science.</p>
                     <p>
                         I worked the past 18 years at US Foods warehouse and bring a wealth of transferable skills in
                         problem-solving, effective communication, and task prioritization, which will serve as a solid
@@ -79,20 +104,23 @@
         </div>
     </section>
 
-    <section id="education" class="education-resume-section parallax d-flex justify-content-center align-items-center">
-        <div class="container flex-container">
-            <div class="row g-1 py-5">  <!--<div class="row g-3 py-5">-->
+    <section id="education" class="education-resume-section parallax d-flex justify-content-center">
+        <div class="container">
+            <div class="row g-1 py-5 justify-content-center align-content-center">  <!--<div class="row g-3 py-5">-->
                 <div
-                        class="col-lg-6 text-center align-items-center border border-3 p-3 bg-black">
+                        class="col-md-6 mb-5 mt-5 text-center border border-2 rounded bg-black p-2 d-flex flex-column justify-content-center align-items-center m-5 mx-auto"
+                        style="width: 350px">
                     <h3>Education</h3>
                     <p>2021 - 2023</p>
                     <p>AS Computer Science</p>
                     <p>Central New Mexico</p>
                 </div>
-                <div class="col-lg-6 text-center border border-3 p-3 bg-black">
+                <div
+                        class="col-md-6 mt-5 mb-5 text-center border border-2 rounded bg-black p1 d-flex flex-column justify-content-center align-items-center m-5 mx-auto"
+                        style="width: 200px">
                     <h3>Resume</h3>
-                    <a href="/Resume1.pdf"
-                       class="button">Enter</a>
+                    <a href="https://ddc-web-student.cnm.edu/~mdiaz20/my-pwp-mariodiaz/Resume.pdf" class="button">Enter
+                    </a>
                 </div>
             </div>
         </div>
@@ -100,20 +128,30 @@
 
     <section id="skills" class="skills-section parallax d-flex justify-content-center bg-black">
         <div class="container">
-            <div class="row g-1 py-5">
-                <div class="col-lg-8">
+            <div class="row g-1 py-5">    <!--<div class="row g-3 py-5">-->
+                <div class="col-lg-6">
                     <h5>Skills:</h5>
-                    <p> Below, you will find a range of skills I've accumulated - courses taken during my College studies, intensive front-end and back-end training from a Full Stack Web Development bootcamp, and others that were self-taught.</p>
+                    <p>Below are some skills I learned from courses I took in College,
+                        Full Stack Web Development and others that were self-taught</p>
                 </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-3">
                     <ul class="skills-list">
-                        <li>JavaScript</li>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Git</li>
+                        <li>Bootstrap</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <ul class="skills-list">
+                        <li>JavaScript</li>
                         <li>Java</li>
                         <li>Python</li>
                         <li>MATLAB</li>
+                        <li>Typescript</li>
                     </ul>
                 </div>
             </div>
@@ -121,44 +159,39 @@
     </section>
 
     <section id="project" class="projects-section parallax container">
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <h2 class="text-center border border-2 rounded mt-5 p-2 bg-black ">
-                    Projects
-                </h2>
+        <h2><u>Projects</u></h2>
+        <div class="container">
+            <div class="row g-1 py-5">   <!--<div class="row">-->
+                <div class="col-md">
+                    <img src="picture1.png"
+                         class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
+                         alt="javascriptI" width="200" height="200">
+                    <a href="https://ddc-web-student.cnm.edu/~mdiaz20/my-pwp-mariodiaz/js1.pdf"
+                       class="button">JavaScript I</a>
+                </div>
+                <div class="col-md">
+                    <img src="picture1.png"
+                         class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
+                         alt="javascriptI" width="200" height="200">
+                    <a href="https://ddc-web-student.cnm.edu/~mdiaz20/my-pwp-mariodiaz/ticTacToe.pdf"
+                       class="button">Java I</a>
+                </div>
+                <div class="col-md">
+                    <img src="picture1.png"
+                         class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
+                         alt="javascriptI" width="200" height="200">
+                    <a href="https://ddc-web-student.cnm.edu/~mdiaz20/my-pwp-mariodiaz/js-challenge.pdf"
+                       class="button">JavaScript II
+                    </a>
+                </div>
+                <div class="col-md">
+                    <img src="picture1.png"
+                         class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
+                         alt="javascriptI" width="200" height="200">
+                    <a href="https://ddc-web-student.cnm.edu/~mdiaz20/my-pwp-mariodiaz/abqTravelTime.pdf"
+                       class="button">Java II</a>
+                </div>
             </div>
-        </div>
-        <div class="row g-1 py-5">   <!--<div class="row">-->
-            <div class="col-md">
-                <img src="picture1.png"
-                     class="mb-5  bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
-                     alt="javascriptI" width="175" height="175">
-                <a href="/js1.pdf"
-                   class="button">JavaScript I</a>
-            </div>
-            <div class="col-md">
-                <img src="picture1.png"
-                     class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
-                     alt="javascriptI" width="175" height="175">
-                <a href="/ticTacToe.pdf"
-                   class="button">Java I</a>
-            </div>
-            <div class="col-md">
-                <img src="picture1.png"
-                     class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
-                     alt="javascriptI" width="175" height="175">
-                <a href="/js-events-challenge.html"
-                   class="button">JavaScript II
-                </a>
-            </div>
-            <div class="col-md">
-                <img src="picture1.png"
-                     class="mb-5 bd-placeholder-img rounded-circle img-responsive center-block d-block mx-auto"
-                     alt="javascriptI" width="175" height="175">
-                <a href="/abqTravelTime.pdf"
-                   class="button">Java II</a>
-            </div>
-        </div>
         </div>
     </section>
 
