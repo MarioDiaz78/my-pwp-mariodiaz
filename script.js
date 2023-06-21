@@ -66,3 +66,13 @@ const draw = () => {
 setInterval(draw, 30);
 //setInterval(draw, 60);
 
+// GSAP Timeline
+var tl = gsap.timeline({repeat: -1}); // Repeat indefinitely
+
+// Apply animation to each carousel item
+$(".carousel__item").each(function(index, element){
+    tl.to(element, { duration: 1, scale: 1, opacity: 1, y: 0 }) // Animate in
+        .to(element, { duration: 1, scale: 0.5, opacity: 0, y: "-150px" }, "+=1"); // Animate out
+});
+
+tl.play();
