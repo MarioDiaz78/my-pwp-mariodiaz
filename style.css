@@ -244,7 +244,7 @@ a.button:hover{
 
 #about {
     color: green;
-    padding: 60px 80px;
+    padding: 30px 40px;
     align-content: center;
     align-items: center;
 }
@@ -263,7 +263,7 @@ a.button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(20%, -50%);
+    transform: translate(10%, 50%);
 }
 
 .carousel__item {
