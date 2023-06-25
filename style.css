@@ -45,6 +45,11 @@ body{
     background-color: black;
 }
 
+.nav-link{
+    color: green;
+    font-size: 20px;
+}
+
 nav{
     background-color: black;
     position: fixed;
@@ -66,7 +71,7 @@ nav ul{
 
 nav li{
     display: inline;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 nav li a{
@@ -224,17 +229,19 @@ nav li a:hover {
 a.button{
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0056b3;
+    background-color: blue;
     color: white;
     border-radius: 4px;
     transition: background-color 0.5s ease;
     text-align: center;
     align-items: center;
     margin-bottom: 40px;
+    font-weight: bold;
 }
 
+
 a.button:hover{
-    background-color: lightskyblue;
+    background-color: dodgerblue;
 }
 
 .projects-section h2 {
@@ -247,6 +254,33 @@ a.button:hover{
     padding: 30px 40px;
     align-content: center;
     align-items: center;
+    background-color: black;
+    margin: 0;
+}
+
+.education-border, .resume-border{
+    border: 2px solid green;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    background-color: green;
+    color: yellow;
+}
+
+.about-border{
+    border: 2px solid green;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#nameHeader{
+    color: yellow;
+    border: 2px solid green;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: green;
 }
 
 .py-5 {
@@ -264,6 +298,7 @@ a.button:hover{
     justify-content: center;
     align-items: center;
     transform: translate(10%, 50%);
+    align-content: center;
 }
 
 .carousel__item {
@@ -273,4 +308,6 @@ a.button:hover{
     opacity: 0; /* Start out hidden */
     transform: scale(0.5) translateY(0); /* Start out smaller and off-center */
     transition: all 1s; /* Smooth transitions */
+    border: 4px solid black;
+    border-radius: 20px;
 }

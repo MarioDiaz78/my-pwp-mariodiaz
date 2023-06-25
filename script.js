@@ -16,7 +16,7 @@ $(document).ready(function () {
 
         $('html, body').animate({
             scrollTop: scrollTo
-        }, 1000, function () {
+        }, 500, function () {
             window.location.hash = hash;
         });
     });
@@ -64,7 +64,6 @@ const draw = () => {
     }
 };
 setInterval(draw, 30);
-//setInterval(draw, 60);
 
 // GSAP Timeline
 var tl = gsap.timeline({repeat: -1}); // Repeat indefinitely
