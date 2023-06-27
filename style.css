@@ -298,7 +298,7 @@ a.button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(10%, 50%);
+    transform: translate(25%, 50%);
     align-content: center;
 }
 
