@@ -119,6 +119,10 @@ nav li a:hover {
     vertical-align: -15%;
 }
 
+.fa {
+    font-size: 6px;
+}
+
 .icon-list {
     display: flex;
     justify-content: space-evenly;
